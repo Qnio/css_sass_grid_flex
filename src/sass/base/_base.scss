@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 5vh repeat(3, minmax(50vh, 1fr)) 20vh repeat(
+      2,
+      minmax(50vh, 1fr)
+    ) 5vh;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 12rem) [col-end]
+    )
+    [center-end] minmax(4rem, 1fr) [full-end];
+  gap: 3rem;
+}
