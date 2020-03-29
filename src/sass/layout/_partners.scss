@@ -1,0 +1,16 @@
+.partners {
+  display: grid;
+  grid-column: full-start / full-end;
+  // @include addBorderShadow;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    &__item {
+      flex-basis: 20rem;
+      @include addBorderShadow;
+    }
+  }
+}

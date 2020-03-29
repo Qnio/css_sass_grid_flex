@@ -1,0 +1,7 @@
+.header {
+  display: grid;
+  grid-column: full-start / full-end;
+  height: 5vh;
+
+  @include addBorderShadow;
+}
